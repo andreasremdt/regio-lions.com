@@ -1,0 +1,35 @@
+function Footer() {
+  return (
+    <footer className="relative mx-auto mt-16 flex max-w-7xl flex-col items-center justify-center p-8 text-center text-sm before:absolute before:bottom-0 before:left-0 before:-z-10 before:aspect-square before:w-64 before:rounded-full before:bg-indigo-100 before:blur-3xl md:flex-row md:justify-between md:text-left dark:before:bg-indigo-900 print:hidden">
+      <p className="mb-4 md:mb-0">
+        &copy; {new Date().getFullYear()} Regio Lions. Alle Rechte vorbehalten. Design & Entwicklung{' '}
+        <a
+          href="https://andreasremdt.com"
+          target="_blank"
+          className="link"
+          rel="nofollow noreferrer noopener"
+        >
+          Andreas Remdt
+        </a>
+        .
+      </p>
+
+      <nav className="space-x-4 md:space-x-8" aria-label="fusszeilennavigation">
+        <a
+          href="/impressum"
+          className="rounded-xs transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+        >
+          Impressum
+        </a>
+        <a
+          href="/datenschutz"
+          className="rounded-xs transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+        >
+          Datenschutz
+        </a>
+      </nav>
+    </footer>
+  )
+}
+
+export default Footer
