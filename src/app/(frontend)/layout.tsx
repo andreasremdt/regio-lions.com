@@ -13,8 +13,14 @@ const roboto = Roboto({
 })
 
 export const metadata = {
-  description: '',
-  title: '%s | Regio Lions',
+  description: {
+    default:
+      'Regio Lions ist ein Verbund von verschiedenen Lions Clubs aus dem Dreiländereck Deutschland / Frankreich / Schweiz',
+  },
+  title: {
+    default: 'Regio Lions',
+    template: '%s | Regio Lions',
+  },
 }
 
 function Layout({ children }: { children: React.ReactNode }) {

@@ -4,21 +4,23 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import imagekitPlugin from 'payloadcms-plugin-imagekit'
 
-import { Users } from './payload/collections/users'
-import { Media } from './payload/collections/media'
+import users from './payload/collections/users'
+import media from './payload/collections/media'
+import clubs from './payload/collections/clubs'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
-    user: Users.slug,
+    user: users.slug,
     importMap: {
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [users, media, clubs],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -36,5 +38,20 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [],
+  plugins: [
+    imagekitPlugin({
+      config: {
+        publicKey: process.env.IMAGEKIT_PUBLIC_KEY || '',
+        privateKey: process.env.IMAGEKIT_PRIVATE_KEY || '',
+        endpoint: process.env.IMAGEKIT_ENDPOINT || '',
+      },
+      collections: {
+        media: {
+          uploadOption: {
+            folder: 'regio-lions',
+          },
+        },
+      },
+    }),
+  ],
 })

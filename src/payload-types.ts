@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    clubs: Club;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -77,6 +78,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    clubs: ClubsSelect<false> | ClubsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -143,7 +145,15 @@ export interface User {
  */
 export interface Media {
   id: string;
-  alt: string;
+  /**
+   * Dieser Text wird für Suchmaschinen und Menschen mit Sehbehinderungen benötigt.
+   */
+  alt?: string | null;
+  imagekit?: {
+    fileId?: string | null;
+    thumbnailUrl?: string | null;
+    url?: string | null;
+  };
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -155,6 +165,19 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "clubs".
+ */
+export interface Club {
+  id: string;
+  name: string;
+  url: string;
+  country: 'Deutschland' | 'Frankreich' | 'Schweiz';
+  image: string | Media;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -170,6 +193,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: string | Media;
+      } | null)
+    | ({
+        relationTo: 'clubs';
+        value: string | Club;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -241,6 +268,13 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  imagekit?:
+    | T
+    | {
+        fileId?: T;
+        thumbnailUrl?: T;
+        url?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -252,6 +286,18 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "clubs_select".
+ */
+export interface ClubsSelect<T extends boolean = true> {
+  name?: T;
+  url?: T;
+  country?: T;
+  image?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

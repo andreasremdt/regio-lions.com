@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-export const Media: CollectionConfig = {
+const Media: CollectionConfig = {
   slug: 'media',
   access: {
     read: () => true,
@@ -8,9 +8,15 @@ export const Media: CollectionConfig = {
   fields: [
     {
       name: 'alt',
+      label: 'Alternativer Text',
       type: 'text',
-      required: true,
+      admin: {
+        description:
+          'Dieser Text wird für Suchmaschinen und Menschen mit Sehbehinderungen benötigt.',
+      },
     },
   ],
   upload: true,
 }
+
+export default Media
