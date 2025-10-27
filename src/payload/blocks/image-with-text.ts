@@ -21,7 +21,7 @@ const imageWithText: Block = {
       required: true,
     },
     {
-      name: 'images',
+      name: 'image',
       type: 'upload',
       relationTo: 'media',
       required: true,

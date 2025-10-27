@@ -262,7 +262,7 @@ export interface LatestNewsBlock {
 export interface ImageWithTextBlock {
   title: string;
   description: string;
-  images: string | Media;
+  image: string | Media;
   text: {
     root: {
       type: string;
@@ -554,7 +554,7 @@ export interface LatestNewsBlockSelect<T extends boolean = true> {
 export interface ImageWithTextBlockSelect<T extends boolean = true> {
   title?: T;
   description?: T;
-  images?: T;
+  image?: T;
   text?: T;
   id?: T;
   blockName?: T;
