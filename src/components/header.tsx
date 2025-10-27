@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
         height={194}
         quality={80}
         loading="eager"
+        priority
         className="w-24 rounded-md md:w-32"
       />
 
@@ -51,24 +53,24 @@ function Header() {
         data-action="menu"
         id="menu"
       >
-        <a
+        <Link
           className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
           href="/"
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
           className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
           href="/news"
         >
           News
-        </a>
-        <a
+        </Link>
+        <Link
           className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
           href="/clubs"
         >
           Clubs
-        </a>
+        </Link>
         <a
           className="inline-flex items-center gap-x-2 rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
           href="https://www.3laenderlauf.org/"
@@ -92,12 +94,12 @@ function Header() {
             ></path>
           </svg>
         </a>
-        <a
+        <Link
           className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
           href="/kontakt"
         >
           Kontakt
-        </a>
+        </Link>
       </nav>
     </header>
   )

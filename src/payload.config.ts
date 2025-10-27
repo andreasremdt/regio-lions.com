@@ -9,6 +9,7 @@ import imagekitPlugin from 'payloadcms-plugin-imagekit'
 import users from './payload/collections/users'
 import media from './payload/collections/media'
 import clubs from './payload/collections/clubs'
+import pages from './payload/collections/pages'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [users, media, clubs],
+  collections: [users, media, clubs, pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
