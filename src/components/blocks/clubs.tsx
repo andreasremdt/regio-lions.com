@@ -1,6 +1,5 @@
 import { getClubs } from '@/lib/fetchers'
-import { Media } from '@/payload-types'
-import Image from 'next/image'
+import ImageKitImage from '../imagekit-image'
 
 async function Clubs() {
   const clubsByCountry = await getClubs()
@@ -16,8 +15,8 @@ async function Clubs() {
             key={club.id}
             className="focus-within:outline-3 group relative isolate aspect-5/4 overflow-hidden rounded-xl shadow-lg after:absolute after:inset-0 after:z-0 after:rounded-xl after:bg-linear-to-b after:from-transparent after:to-gray-900/80 focus-within:outline-solid focus-within:outline-offset-2 focus-within:outline-primary-900 md:aspect-square dark:focus-within:outline-primary-200"
           >
-            <Image
-              src={(club.image as Media).imagekit?.url || ''}
+            <ImageKitImage
+              image={club.image}
               alt={club.name}
               width={400}
               height={400}
