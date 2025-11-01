@@ -1,7 +1,7 @@
 import type { Media } from '@/payload-types'
 import Image, { ImageProps } from 'next/image'
 
-type Props = Omit<ImageProps, 'src'> & {
+type Props = Omit<ImageProps, 'src' | 'alt'> & {
   image: string | Media
 }
 
@@ -12,11 +12,20 @@ export default function ImageKitImage({
   decoding = 'async',
   ...props
 }: Props) {
-  const url = typeof image === 'string' ? image : image.imagekit?.url
-
-  if (!url) {
+  if (typeof image === 'string' || !image.imagekit) {
     return null
   }
 
-  return <Image src={url} loading={loading} quality={quality} decoding={decoding} {...props} />
+  return (
+    <Image
+      src={image.imagekit.url || ''}
+      loading={loading}
+      alt={image.alt || ''}
+      quality={quality}
+      decoding={decoding}
+      width={image.width || 300}
+      height={image.height || 300}
+      {...props}
+    />
+  )
 }

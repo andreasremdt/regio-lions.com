@@ -14,9 +14,6 @@ export default function Hero({ title, description, images, buttonText, buttonLin
         <div className="pt-72">
           <ImageKitImage
             image={images[0]}
-            alt="gruppenfoto der teilnehmer des sommercamps 2022 vor einem tiergehege"
-            width={300}
-            height={350}
             priority
             className="aspect-[1/1.5] rounded-xl object-cover shadow-lg"
           />
@@ -24,17 +21,11 @@ export default function Hero({ title, description, images, buttonText, buttonLin
         <div className="pt-40">
           <ImageKitImage
             image={images[1]}
-            alt="hausboot während der fahrt auf einem kanal"
-            width={300}
-            height={350}
             priority
             className="mb-4 aspect-[1/1.5] rounded-xl object-cover shadow-lg md:mb-8"
           />
           <ImageKitImage
             image={images[2]}
-            alt="menschenmenge in basel vor einer konzertbühne"
-            width={300}
-            height={350}
             priority
             className="aspect-[1/1.5] rounded-xl object-cover shadow-lg"
           />
@@ -42,17 +33,11 @@ export default function Hero({ title, description, images, buttonText, buttonLin
         <div>
           <ImageKitImage
             image={images[3]}
-            alt="gruppe von kindern in einer höhle im parc l'eclere"
-            width={300}
-            height={350}
             priority
             className="mb-4 aspect-[1/1.5] rounded-xl object-cover shadow-lg md:mb-8"
           />
           <ImageKitImage
             image={images[4]}
-            alt="flugzeug auf rollfeld vor dunklen wolken"
-            width={300}
-            height={350}
             priority
             className="mb-8 aspect-[1/1.5] rounded-xl object-cover shadow-lg"
           />

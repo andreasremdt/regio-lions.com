@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-const Users: CollectionConfig = {
+const users: CollectionConfig = {
   slug: 'users',
   admin: {
     useAsTitle: 'email',
@@ -9,4 +9,4 @@ const Users: CollectionConfig = {
   fields: [],
 }
 
-export default Users
+export default users

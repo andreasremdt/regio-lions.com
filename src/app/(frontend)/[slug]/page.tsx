@@ -7,17 +7,22 @@ type Props = {
   params: Promise<{
     slug: string
   }>
+  searchParams: Promise<{
+    page: string
+  }>
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
   const { slug } = await params
+  const { page: pageNumber } = await searchParams
+
   const page = await getPageBySlug(slug || 'home')
 
   if (!page) {
     notFound()
   }
 
-  return <BlockRenderer blocks={page.content} />
+  return <BlockRenderer blocks={page.content} pageNumber={Number(pageNumber)} />
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -28,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: page.title,
     description: page.description,
     authors: [{ name: 'Andreas Remdt', url: 'https://andreasremdt.com' }],
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3000'),
     openGraph: {
       title: page.title as string,
       description: page.description as string,

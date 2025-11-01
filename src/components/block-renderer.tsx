@@ -5,8 +5,14 @@ import Hero from './blocks/hero'
 import WhoWeAre from './blocks/who-we-are'
 import ImageWithText from './blocks/image-with-text'
 import Grid from './blocks/grid'
+import News from './blocks/news'
 
-function BlockRenderer({ blocks }: { blocks: Page['content'] }) {
+type Props = {
+  blocks: Page['content']
+  pageNumber: number
+}
+
+function BlockRenderer({ blocks, pageNumber }: Props) {
   if (!blocks) return null
 
   return blocks.map((block) => {
@@ -23,6 +29,8 @@ function BlockRenderer({ blocks }: { blocks: Page['content'] }) {
         return <ImageWithText {...block} key={block.id} />
       case 'grid':
         return <Grid {...block} key={block.id} />
+      case 'news':
+        return <News {...block} key={block.id} pageNumber={pageNumber} />
       default:
         return null
     }

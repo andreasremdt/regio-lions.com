@@ -7,8 +7,9 @@ import whoWeAre from '../blocks/who-we-are'
 import image from '../blocks/image'
 import richText from '../blocks/rich-text'
 import header from '../blocks/header'
+import news from '../blocks/news'
 
-const Pages: CollectionConfig = {
+const pages: CollectionConfig = {
   slug: 'pages',
   admin: {
     useAsTitle: 'title',
@@ -40,9 +41,9 @@ const Pages: CollectionConfig = {
       name: 'content',
       label: 'Inhalt',
       type: 'blocks',
-      blocks: [hero, grid, latestNews, imageWithText, whoWeAre, image, richText, header],
+      blocks: [hero, grid, latestNews, imageWithText, whoWeAre, image, richText, header, news],
     },
   ],
 }
 
-export default Pages
+export default pages

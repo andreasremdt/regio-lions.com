@@ -10,6 +10,7 @@ import users from './payload/collections/users'
 import media from './payload/collections/media'
 import clubs from './payload/collections/clubs'
 import pages from './payload/collections/pages'
+import news from './payload/collections/news'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -21,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [users, media, clubs, pages],
+  collections: [users, media, clubs, pages, news],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -49,7 +50,7 @@ export default buildConfig({
       collections: {
         media: {
           uploadOption: {
-            folder: 'regio-lions',
+            folder: process.env.IMAGEKIT_FOLDER || '',
           },
         },
       },

@@ -17,12 +17,6 @@ async function Clubs() {
           >
             <ImageKitImage
               image={club.image}
-              alt={club.name}
-              width={400}
-              height={400}
-              quality={80}
-              loading="eager"
-              decoding="async"
               className="aspect-square h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 sm:max-h-none"
             />
 

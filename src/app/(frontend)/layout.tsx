@@ -25,7 +25,7 @@ export const metadata = {
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className="scroll-smooth">
+    <html lang="de" className="scroll-smooth" data-scroll-behavior="smooth">
       <body
         className={cn(
           roboto.variable,

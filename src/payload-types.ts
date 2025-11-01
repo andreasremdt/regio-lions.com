@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     clubs: Club;
     pages: Page;
+    news: News;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     clubs: ClubsSelect<false> | ClubsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    news: NewsSelect<false> | NewsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -203,6 +205,7 @@ export interface Page {
         | ImageBlock
         | RichTextBlock
         | HeaderBlock
+        | NewsBlock
       )[]
     | null;
   updatedAt: string;
@@ -359,6 +362,51 @@ export interface HeaderBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NewsBlock".
+ */
+export interface NewsBlock {
+  amount: number;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'news';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news".
+ */
+export interface News {
+  id: string;
+  title: string;
+  /**
+   * Der Slug wird automatisch aus dem Titel generiert, kann aber angepasst werden.
+   */
+  slug: string;
+  publishedAt: string;
+  published?: boolean | null;
+  excerpt: string;
+  thumbnail?: (string | null) | Media;
+  thumbnailText?: string | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  gallery?: (string | Media)[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -379,6 +427,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'pages';
         value: string | Page;
+      } | null)
+    | ({
+        relationTo: 'news';
+        value: string | News;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -500,6 +552,7 @@ export interface PagesSelect<T extends boolean = true> {
         image?: T | ImageBlockSelect<T>;
         richText?: T | RichTextBlockSelect<T>;
         header?: T | HeaderBlockSelect<T>;
+        news?: T | NewsBlockSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -603,6 +656,32 @@ export interface HeaderBlockSelect<T extends boolean = true> {
   description?: T;
   id?: T;
   blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "NewsBlock_select".
+ */
+export interface NewsBlockSelect<T extends boolean = true> {
+  amount?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news_select".
+ */
+export interface NewsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  publishedAt?: T;
+  published?: T;
+  excerpt?: T;
+  thumbnail?: T;
+  thumbnailText?: T;
+  content?: T;
+  gallery?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
