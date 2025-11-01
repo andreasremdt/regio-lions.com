@@ -206,6 +206,7 @@ export interface Page {
         | RichTextBlock
         | HeaderBlock
         | NewsBlock
+        | ClubsBlock
       )[]
     | null;
   updatedAt: string;
@@ -369,6 +370,20 @@ export interface NewsBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'news';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ClubsBlock".
+ */
+export interface ClubsBlock {
+  countries: {
+    country: 'Deutschland' | 'Frankreich' | 'Schweiz';
+    clubs: (string | Club)[];
+    id?: string | null;
+  }[];
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'clubs';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -553,6 +568,7 @@ export interface PagesSelect<T extends boolean = true> {
         richText?: T | RichTextBlockSelect<T>;
         header?: T | HeaderBlockSelect<T>;
         news?: T | NewsBlockSelect<T>;
+        clubs?: T | ClubsBlockSelect<T>;
       };
   updatedAt?: T;
   createdAt?: T;
@@ -663,6 +679,21 @@ export interface HeaderBlockSelect<T extends boolean = true> {
  */
 export interface NewsBlockSelect<T extends boolean = true> {
   amount?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ClubsBlock_select".
+ */
+export interface ClubsBlockSelect<T extends boolean = true> {
+  countries?:
+    | T
+    | {
+        country?: T;
+        clubs?: T;
+        id?: T;
+      };
   id?: T;
   blockName?: T;
 }

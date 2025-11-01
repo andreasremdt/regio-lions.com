@@ -8,6 +8,7 @@ import image from '../blocks/image'
 import richText from '../blocks/rich-text'
 import header from '../blocks/header'
 import news from '../blocks/news'
+import clubs from '../blocks/clubs'
 
 const pages: CollectionConfig = {
   slug: 'pages',
@@ -41,7 +42,18 @@ const pages: CollectionConfig = {
       name: 'content',
       label: 'Inhalt',
       type: 'blocks',
-      blocks: [hero, grid, latestNews, imageWithText, whoWeAre, image, richText, header, news],
+      blocks: [
+        hero,
+        grid,
+        latestNews,
+        imageWithText,
+        whoWeAre,
+        image,
+        richText,
+        header,
+        news,
+        clubs,
+      ],
     },
   ],
 }
