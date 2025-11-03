@@ -4,7 +4,6 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
-import imagekitPlugin from 'payloadcms-plugin-imagekit'
 
 import users from './payload/collections/users'
 import media from './payload/collections/media'
@@ -41,20 +40,4 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [
-    imagekitPlugin({
-      config: {
-        publicKey: process.env.IMAGEKIT_PUBLIC_KEY || '',
-        privateKey: process.env.IMAGEKIT_PRIVATE_KEY || '',
-        endpoint: process.env.IMAGEKIT_ENDPOINT || '',
-      },
-      collections: {
-        media: {
-          uploadOption: {
-            folder: process.env.IMAGEKIT_FOLDER || '',
-          },
-        },
-      },
-    }),
-  ],
 })
