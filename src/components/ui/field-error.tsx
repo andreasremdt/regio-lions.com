@@ -1,0 +1,21 @@
+import { ComponentPropsWithoutRef } from 'react'
+import { cn } from '@/lib/utils'
+
+type Props = ComponentPropsWithoutRef<'p'> & {
+  error?: string
+}
+
+export default function FieldError({ id, error, className, ...props }: Props) {
+  if (!error) return null
+
+  return (
+    <p
+      className={cn('text-red-500 text-sm mt-1', className)}
+      id={`${id}-error`}
+      aria-live="assertive"
+      {...props}
+    >
+      {error}
+    </p>
+  )
+}

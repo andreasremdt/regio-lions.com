@@ -11,6 +11,7 @@ import media from './payload/collections/media'
 import clubs from './payload/collections/clubs'
 import pages from './payload/collections/pages'
 import news from './payload/collections/news'
+import messages from './payload/collections/messages'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,7 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [users, media, clubs, pages, news],
+  collections: [users, media, clubs, pages, news, messages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

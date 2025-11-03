@@ -9,6 +9,7 @@ import richText from '../blocks/rich-text'
 import header from '../blocks/header'
 import news from '../blocks/news'
 import clubs from '../blocks/clubs'
+import contactForm from '../blocks/contact-form'
 
 const pages: CollectionConfig = {
   slug: 'pages',
@@ -53,6 +54,7 @@ const pages: CollectionConfig = {
         header,
         news,
         clubs,
+        contactForm,
       ],
     },
   ],
