@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://andreasremdt.com"
           target="_blank"
-          className="link"
+          className="text-primary-900 underline font-medium hover:text-gray-900"
           rel="nofollow noreferrer noopener"
         >
           Andreas Remdt

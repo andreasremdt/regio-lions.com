@@ -26,6 +26,7 @@
       opacity: 0;
       translate: 1.5rem 0;
     }
+
     100% {
       opacity: 1;
       translate: 0 0;
@@ -45,7 +46,4 @@
   @apply border-primary-900 bg-white text-primary-900 hover:bg-primary-900 hover:text-white focus-visible:bg-primary-900 focus-visible:text-white focus-visible:ring-primary-200 disabled:border-gray-500 disabled:text-gray-500 dark:border-white dark:bg-transparent dark:text-white dark:hover:border-primary-200 dark:hover:bg-transparent dark:hover:text-primary-200 dark:focus-visible:border-primary-200 dark:focus-visible:bg-transparent dark:focus-visible:text-primary-200 dark:focus-visible:ring-white/30;
 }
 
-@utility link {
-  @apply rounded-xs font-medium text-primary-900 hover:underline focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-primary-200 dark:focus-visible:outline-primary-200;
-}
 
