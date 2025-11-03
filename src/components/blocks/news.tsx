@@ -3,7 +3,7 @@ import type { NewsBlock } from '@/payload-types'
 import NewsPreview from '../news-preview'
 import Pagination from '../pagination'
 
-async function News({ amount, pageNumber }: NewsBlock & { pageNumber: number }) {
+export default async function News({ amount, pageNumber }: NewsBlock & { pageNumber: number }) {
   const news = await getAllNews(amount, pageNumber)
 
   return (
@@ -16,5 +16,3 @@ async function News({ amount, pageNumber }: NewsBlock & { pageNumber: number }) 
     </div>
   )
 }
-
-export default News

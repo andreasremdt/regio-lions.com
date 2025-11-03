@@ -7,7 +7,7 @@ export const metadata = {
     'Die von Ihnen gewünschte Seite konnte nicht gefunden werden. Bitte vergewissern Sie sich, das die URL stimmt.',
 }
 
-function NotFound() {
+export default function NotFound() {
   return (
     <>
       <Header
@@ -21,5 +21,3 @@ function NotFound() {
     </>
   )
 }
-
-export default NotFound

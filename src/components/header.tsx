@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-function Header() {
+export default function Header() {
   return (
     <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 before:absolute before:-top-1/2 before:bottom-32 before:right-0 before:-z-10 before:aspect-square before:w-48 before:rounded-full before:bg-purple-100 before:blur-3xl md:px-8 md:py-8 dark:before:bg-purple-900 print:hidden">
       <Image
@@ -104,5 +104,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header

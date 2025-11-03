@@ -1,5 +1,5 @@
 import type { Media } from '@/payload-types'
-import Image, { ImageProps } from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 
 type Props = Omit<ImageProps, 'src' | 'alt'> & {
   image: string | Media

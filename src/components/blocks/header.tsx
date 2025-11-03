@@ -1,11 +1,9 @@
-import type { ReactNode } from 'react'
-
 type Props = {
   title: string
   description: string
 }
 
-function Header({ title, description }: Props) {
+export default function Header({ title, description }: Props) {
   return (
     <header className="py-8">
       <h1 className="h1 mb-8" itemProp="headline">
@@ -17,5 +15,3 @@ function Header({ title, description }: Props) {
     </header>
   )
 }
-
-export default Header

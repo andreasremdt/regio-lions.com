@@ -1,4 +1,4 @@
-function JumpToContent() {
+export default function JumpToContent() {
   return (
     <a
       href="#content"
@@ -8,5 +8,3 @@ function JumpToContent() {
     </a>
   )
 }
-
-export default JumpToContent

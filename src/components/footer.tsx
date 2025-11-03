@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="relative mx-auto mt-16 flex max-w-7xl flex-col items-center justify-center p-8 text-center text-sm before:absolute before:bottom-0 before:left-0 before:-z-10 before:aspect-square before:w-64 before:rounded-full before:bg-indigo-100 before:blur-3xl md:flex-row md:justify-between md:text-left dark:before:bg-indigo-900 print:hidden">
       <p className="mb-4 md:mb-0">
@@ -33,5 +33,3 @@ function Footer() {
     </footer>
   )
 }
-
-export default Footer

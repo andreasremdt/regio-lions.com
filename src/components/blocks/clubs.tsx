@@ -1,7 +1,7 @@
 import ImageKitImage from '../imagekit-image'
 import type { ClubsBlock } from '@/payload-types'
 
-async function Clubs({ countries }: ClubsBlock) {
+export default async function Clubs({ countries }: ClubsBlock) {
   return countries.map((country) => (
     <div key={country.country} className="mt-16 first-of-type:mt-0">
       <h2 className="text-3xl font-black leading-none text-primary-900 md:text-4xl lg:text-5xl dark:text-primary-200 mb-8">
@@ -40,5 +40,3 @@ async function Clubs({ countries }: ClubsBlock) {
     </div>
   ))
 }
-
-export default Clubs

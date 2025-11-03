@@ -8,7 +8,7 @@ type Props = Pick<RichTextBlock, 'content'> & {
   className?: string
 }
 
-function Prose({ content, className }: Props) {
+export default function Prose({ content, className }: Props) {
   if (!content) return null
 
   return (
@@ -36,5 +36,3 @@ function Prose({ content, className }: Props) {
     />
   )
 }
-
-export default Prose

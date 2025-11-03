@@ -14,7 +14,7 @@ type Props = {
   pageNumber: number
 }
 
-function BlockRenderer({ blocks, pageNumber }: Props) {
+export default function BlockRenderer({ blocks, pageNumber }: Props) {
   if (!blocks) return null
 
   return blocks.map((block) => {
@@ -42,5 +42,3 @@ function BlockRenderer({ blocks, pageNumber }: Props) {
     }
   })
 }
-
-export default BlockRenderer

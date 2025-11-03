@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode
 }
 
-function Hero({ title, children }: Props) {
+export default function Hero({ title, children }: Props) {
   return (
     <header className="py-8">
       <h1 className="h1 mb-8" itemProp="headline">
@@ -17,5 +17,3 @@ function Hero({ title, children }: Props) {
     </header>
   )
 }
-
-export default Hero
