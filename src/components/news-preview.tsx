@@ -24,7 +24,7 @@ export default function NewsPreview({
       {thumbnail ? (
         <ImageKitImage
           image={thumbnail}
-          className="w-full lg:max-w-72 rounded-xl h-64 object-cover shadow-lg lg:aspect-square lg:h-auto"
+          className="h-64 w-full rounded-xl object-cover shadow-lg lg:aspect-square lg:h-auto lg:max-w-72"
         />
       ) : (
         <NoImage className="aspect-square w-full lg:max-w-72" />
@@ -37,7 +37,7 @@ export default function NewsPreview({
         >
           {formatDate(publishedAt)}
         </time>
-        <Heading level="h3" tag="h2" className="mb-6 mt-1" itemProp="headline">
+        <Heading level="h3" tag="h2" className="mt-1 mb-6" itemProp="headline">
           {content || gallery ? (
             <Link href={`/news/${slug}`} className="hover:text-primary-900">
               {title}

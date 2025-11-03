@@ -4,7 +4,7 @@ import Button from './ui/button'
 
 export default function Pagination({ totalPages, page, nextPage, prevPage }: PaginatedDocs<News>) {
   return (
-    <nav className="flex items-center justify-end gap-x-2 print:hidden mt-16">
+    <nav className="mt-16 flex items-center justify-end gap-x-2 print:hidden">
       <p className="mr-6">
         Seite {page} von {totalPages}
       </p>

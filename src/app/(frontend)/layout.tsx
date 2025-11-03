@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body
         className={cn(
           roboto.variable,
-          'antialiased leading-relaxed text-gray-600 dark:bg-gray-900 dark:text-gray-100',
+          'leading-relaxed text-gray-600 antialiased dark:bg-gray-900 dark:text-gray-100',
         )}
         itemScope
         itemType="https://schema.org/WebPage"

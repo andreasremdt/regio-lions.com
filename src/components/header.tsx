@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 before:absolute before:-top-1/2 before:bottom-32 before:right-0 before:-z-10 before:aspect-square before:w-48 before:rounded-full before:bg-purple-100 before:blur-3xl md:px-8 md:py-8 dark:before:bg-purple-900 print:hidden">
+    <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 before:absolute before:-top-1/2 before:right-0 before:bottom-32 before:-z-10 before:aspect-square before:w-48 before:rounded-full before:bg-purple-100 before:blur-3xl md:px-8 md:py-8 dark:before:bg-purple-900 print:hidden">
       <Image
         src="https://ik.imagekit.io/6uqkzvybwk/regio-lions/logo.png?updatedAt=1707247965694"
         alt="Regio Lions Logo"
@@ -22,7 +22,7 @@ export default function Header() {
         aria-controls="menu"
         aria-expanded="false"
         data-action="toggle-menu"
-        className="z-20 rounded-xs text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 md:hidden dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+        className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 z-20 rounded-xs text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid md:hidden dark:text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,25 +54,25 @@ export default function Header() {
         id="menu"
       >
         <Link
-          className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="/"
         >
           Home
         </Link>
         <Link
-          className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="/news"
         >
           News
         </Link>
         <Link
-          className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="/clubs"
         >
           Clubs
         </Link>
         <a
-          className="inline-flex items-center gap-x-2 rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 inline-flex items-center gap-x-2 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="https://www.3laenderlauf.org/"
           target="_blank"
           rel="noopener nofollow noreferrer"
@@ -95,7 +95,7 @@ export default function Header() {
           </svg>
         </a>
         <Link
-          className="rounded-xs font-medium text-gray-900 transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-white dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="/kontakt"
         >
           Kontakt

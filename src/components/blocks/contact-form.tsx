@@ -80,7 +80,7 @@ export default function ContactForm() {
           Bitte versuchen Sie es später erneut oder schreiben Sie uns eine E-Mail an{' '}
           <a
             href="mailto:info@regio-lions.de"
-            className="font-medium text-primary-900 underline hover:text-gray-900 focus-visible:text-gray-900"
+            className="text-primary-900 font-medium underline hover:text-gray-900 focus-visible:text-gray-900"
           >
             info@regio-lions.de
           </a>

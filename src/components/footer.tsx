@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://andreasremdt.com"
           target="_blank"
-          className="text-primary-900 underline font-medium hover:text-gray-900"
+          className="text-primary-900 font-medium underline hover:text-gray-900"
           rel="nofollow noreferrer noopener"
         >
           Andreas Remdt
@@ -19,13 +19,13 @@ export default function Footer() {
       <nav className="space-x-4 md:space-x-8" aria-label="fusszeilennavigation">
         <Link
           href="/impressum"
-          className="rounded-xs transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid"
         >
           Impressum
         </Link>
         <Link
           href="/datenschutz"
-          className="rounded-xs transition-colors hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid"
         >
           Datenschutz
         </Link>

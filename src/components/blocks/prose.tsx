@@ -30,7 +30,7 @@ export default function Prose({ content, className }: Props) {
       }}
       data={content}
       className={cn(
-        'prose max-w-none md:w-2/3 prose-a:text-primary-900 prose-a:underline-offset-4 prose-a:underline-current prose-a:hover:text-neutral-900 prose-a:focus-visible:text-neutral-900 prose-img:rounded-xl prose-img:shadow-lg',
+        'prose prose-a:text-primary-900 prose-a:underline-offset-4 prose-a:underline-current prose-a:hover:text-neutral-900 prose-a:focus-visible:text-neutral-900 prose-img:rounded-xl prose-img:shadow-lg max-w-none md:w-2/3',
         className,
       )}
     />

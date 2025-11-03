@@ -5,7 +5,7 @@ import Button from '../ui/button'
 
 export default function Hero({ title, description, images, buttonText, buttonLink }: HeroBlock) {
   return (
-    <section className="relative py-16 before:absolute before:bottom-32 before:right-0 before:-z-10 before:aspect-square before:w-64 before:rounded-full before:bg-fuchsia-100 before:blur-3xl after:absolute after:-bottom-48 after:right-32 after:-z-10 after:aspect-square after:w-72 after:rounded-full after:bg-purple-100 after:blur-3xl md:py-32 dark:before:bg-fuchsia-900 dark:after:bg-purple-950">
+    <section className="relative py-16 before:absolute before:right-0 before:bottom-32 before:-z-10 before:aspect-square before:w-64 before:rounded-full before:bg-fuchsia-100 before:blur-3xl after:absolute after:right-32 after:-bottom-48 after:-z-10 after:aspect-square after:w-72 after:rounded-full after:bg-purple-100 after:blur-3xl md:py-32 dark:before:bg-fuchsia-900 dark:after:bg-purple-950">
       <Heading level="h1" tag="h1" className="mb-8 md:w-3/5">
         {title}
       </Heading>

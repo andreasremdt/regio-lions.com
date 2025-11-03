@@ -9,7 +9,7 @@ export default function NoImage({ className }: Props) {
     <span
       role="presentation"
       className={cn(
-        'flex h-full flex-col bg-gray-50 items-center justify-center rounded-xl text-sm text-gray-500 transition-transform group-hover:scale-110 dark:bg-gray-600 dark:text-white',
+        'flex h-full flex-col items-center justify-center rounded-xl bg-gray-50 text-sm text-gray-500 transition-transform group-hover:scale-110 dark:bg-gray-600 dark:text-white',
         className,
       )}
     >

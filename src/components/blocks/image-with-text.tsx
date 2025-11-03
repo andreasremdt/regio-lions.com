@@ -12,9 +12,9 @@ export default function ImageWithText({ title, description, image, text }: Image
       <p className="mb-12 text-xl md:w-2/3">{description}</p>
 
       <div className="gap-16 md:flex">
-        <ImageKitImage image={image} className="mb-16 rounded-xl shadow-lg md:mb-0 w-1/2" />
+        <ImageKitImage image={image} className="mb-16 w-1/2 rounded-xl shadow-lg md:mb-0" />
 
-        <Prose content={text} className="w-1/2 -mt-4" />
+        <Prose content={text} className="-mt-4 w-1/2" />
       </div>
     </section>
   )

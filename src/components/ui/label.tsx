@@ -14,7 +14,7 @@ export default function Label({ children, optional, className, ...props }: Props
       {children}
 
       {optional ? (
-        <span className="ml-auto text-xs font-normal uppercase text-gray-500">optional</span>
+        <span className="ml-auto text-xs font-normal text-gray-500 uppercase">optional</span>
       ) : null}
     </label>
   )

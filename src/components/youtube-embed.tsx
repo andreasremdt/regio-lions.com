@@ -11,7 +11,7 @@ export default function YouTubeEmbed({ videoId }: Props) {
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
-      className="aspect-video h-auto w-full rounded-xl shadow-xl print:hidden my-8"
+      className="my-8 aspect-video h-auto w-full rounded-xl shadow-xl print:hidden"
     />
   )
 }

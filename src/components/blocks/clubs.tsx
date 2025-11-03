@@ -18,7 +18,7 @@ export default async function Clubs({ countries }: ClubsBlock) {
           return (
             <figure
               key={club.id}
-              className="focus-within:outline-3 group relative isolate aspect-5/4 overflow-hidden rounded-xl shadow-lg after:absolute after:inset-0 after:z-0 after:rounded-xl after:bg-linear-to-b after:from-transparent after:to-gray-900/80 focus-within:outline-solid focus-within:outline-offset-2 focus-within:outline-primary-900 md:aspect-square dark:focus-within:outline-primary-200"
+              className="group focus-within:outline-primary-900 dark:focus-within:outline-primary-200 relative isolate aspect-5/4 overflow-hidden rounded-xl shadow-lg after:absolute after:inset-0 after:z-0 after:rounded-xl after:bg-linear-to-b after:from-transparent after:to-gray-900/80 focus-within:outline-3 focus-within:outline-offset-2 focus-within:outline-solid md:aspect-square"
             >
               <ImageKitImage
                 image={club.image}
@@ -29,7 +29,7 @@ export default async function Clubs({ countries }: ClubsBlock) {
                   href={club.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-bold leading-tight lg:text-xl dark:text-white text-white after:absolute after:inset-0 focus-visible:outline-hidden"
+                  className="text-lg leading-tight font-bold text-white after:absolute after:inset-0 focus-visible:outline-hidden lg:text-xl dark:text-white"
                 >
                   {club.name}
                 </a>

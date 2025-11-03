@@ -10,7 +10,7 @@ export default function FieldError({ id, error, className, ...props }: Props) {
 
   return (
     <p
-      className={cn('text-red-500 text-sm mt-1', className)}
+      className={cn('mt-1 text-sm text-red-500', className)}
       id={`${id}-error`}
       aria-live="assertive"
       {...props}
