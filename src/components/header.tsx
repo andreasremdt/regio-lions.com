@@ -4,16 +4,18 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 before:absolute before:-top-1/2 before:right-0 before:bottom-32 before:-z-10 before:aspect-square before:w-48 before:rounded-full before:bg-purple-100 before:blur-3xl md:px-8 md:py-8 dark:before:bg-purple-900 print:hidden">
-      <Image
-        src="https://ik.imagekit.io/6uqkzvybwk/regio-lions/logo.png?updatedAt=1707247965694"
-        alt="Regio Lions Logo"
-        width={250}
-        height={194}
-        quality={80}
-        loading="eager"
-        priority
-        className="w-24 rounded-md md:w-32"
-      />
+      <Link href="/">
+        <Image
+          src="https://ik.imagekit.io/6uqkzvybwk/regio-lions/logo.png?updatedAt=1707247965694"
+          alt="Regio Lions Logo"
+          width={250}
+          height={194}
+          quality={75}
+          loading="eager"
+          priority
+          className="w-24 rounded-md md:w-32"
+        />
+      </Link>
 
       <button
         type="button"
