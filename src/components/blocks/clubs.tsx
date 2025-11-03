@@ -1,12 +1,13 @@
 import ImageKitImage from '../imagekit-image'
 import type { ClubsBlock } from '@/payload-types'
+import Heading from '../ui/heading'
 
 export default async function Clubs({ countries }: ClubsBlock) {
   return countries.map((country) => (
     <div key={country.country} className="mt-16 first-of-type:mt-0">
-      <h2 className="text-3xl font-black leading-none text-primary-900 md:text-4xl lg:text-5xl dark:text-primary-200 mb-8">
+      <Heading level="h2" tag="h2" className="mb-8">
         {country.country}
-      </h2>
+      </Heading>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
         {country.clubs.map((club) => {

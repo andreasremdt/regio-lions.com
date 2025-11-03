@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
+import Heading from './heading'
 
 type Props = ComponentPropsWithoutRef<'div'> & {
   title: string
@@ -36,7 +37,9 @@ export default function Alert({ children, className, title, variant, ...props }:
           />
         )}
       </svg>
-      <h2 className="h3">{title}</h2>
+      <Heading level="h3" tag="h2">
+        {title}
+      </Heading>
       <p>{children}</p>
     </div>
   )

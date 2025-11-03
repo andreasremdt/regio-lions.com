@@ -1,11 +1,14 @@
 import type { ImageWithTextBlock } from '@/payload-types'
 import ImageKitImage from '../imagekit-image'
 import Prose from './prose'
+import Heading from '../ui/heading'
 
 export default function ImageWithText({ title, description, image, text }: ImageWithTextBlock) {
   return (
     <section className="pt-16 md:pt-32 lg:pt-48">
-      <h2 className="h2 mb-8">{title}</h2>
+      <Heading level="h2" tag="h2" className="mb-8">
+        {title}
+      </Heading>
       <p className="mb-12 text-xl md:w-2/3">{description}</p>
 
       <div className="gap-16 md:flex">

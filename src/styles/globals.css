@@ -49,18 +49,3 @@
   @apply rounded-xs font-medium text-primary-900 hover:underline focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 dark:text-primary-200 dark:focus-visible:outline-primary-200;
 }
 
-@utility h1 {
-  @apply text-4xl font-black leading-none text-primary-900 md:text-5xl lg:text-6xl dark:text-primary-200;
-}
-
-@utility h2 {
-  @apply text-3xl font-black leading-none text-primary-900 md:text-4xl lg:text-5xl dark:text-primary-200;
-}
-
-@utility h3 {
-  @apply text-xl font-bold leading-tight text-gray-900 md:text-2xl dark:text-white;
-}
-
-@utility h4 {
-  @apply text-lg font-bold leading-tight text-gray-900 lg:text-xl dark:text-white;
-}

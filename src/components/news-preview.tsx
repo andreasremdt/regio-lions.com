@@ -3,6 +3,7 @@ import ImageKitImage from './imagekit-image'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
 import NoImage from './no-image'
+import Heading from './ui/heading'
 
 export default function NewsPreview({
   thumbnail,
@@ -35,7 +36,7 @@ export default function NewsPreview({
         >
           {formatDate(publishedAt)}
         </time>
-        <h2 className="h4 mb-6 mt-1" itemProp="headline">
+        <Heading level="h3" tag="h2" className="mb-6 mt-1" itemProp="headline">
           {content || gallery ? (
             <Link href={`/news/${slug}`} className="hover:text-primary-900">
               {title}
@@ -43,7 +44,7 @@ export default function NewsPreview({
           ) : (
             title
           )}
-        </h2>
+        </Heading>
         <p className="mb-6 max-w-prose" itemProp="abstract">
           {excerpt}
         </p>
