@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 import { Roboto } from 'next/font/google'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import JumpToContent from '@/components/jump-to-content'
+import Button from '@/components/ui/button'
 import '@/styles/globals.css'
 
 const roboto = Roboto({
@@ -34,7 +34,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         itemScope
         itemType="https://schema.org/WebPage"
       >
-        <JumpToContent />
+        <Button
+          href="#content"
+          className="absolute -top-1 left-1/2 z-10 -translate-x-1/2 -translate-y-full rounded-t-none transition-transform focus:translate-y-0"
+        >
+          Zum Inhalt springen
+        </Button>
 
         <Header />
 

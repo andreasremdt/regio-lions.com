@@ -2,7 +2,7 @@ import type { News } from '@/payload-types'
 import ImageKitImage from './imagekit-image'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
-import NoImage from './no-image'
+import NoImage from './ui/no-image'
 import Heading from './ui/heading'
 import Button from './ui/button'
 

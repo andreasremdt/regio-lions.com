@@ -1,10 +1,11 @@
 import { cn } from '@/lib/utils'
+import type { ComponentPropsWithoutRef } from 'react'
 
-type Props = {
+type Props = ComponentPropsWithoutRef<'span'> & {
   className?: string
 }
 
-export default function NoImage({ className }: Props) {
+export default function NoImage({ className, ...props }: Props) {
   return (
     <span
       role="presentation"
@@ -12,6 +13,7 @@ export default function NoImage({ className }: Props) {
         'flex h-full flex-col items-center justify-center rounded-xl bg-gray-50 text-sm text-gray-500 transition-transform group-hover:scale-110 dark:bg-gray-600 dark:text-white',
         className,
       )}
+      {...props}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

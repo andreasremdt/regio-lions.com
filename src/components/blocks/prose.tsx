@@ -2,7 +2,7 @@ import type { Media, RichTextBlock } from '@/payload-types'
 import { defaultJSXConverters, RichText } from '@payloadcms/richtext-lexical/react'
 import { cn } from '@/lib/utils'
 import ImageKitImage from '../imagekit-image'
-import YouTubeEmbed from '../youtube-embed'
+import YouTubeEmbed from '../ui/youtube-embed'
 
 type Props = Pick<RichTextBlock, 'content'> & {
   className?: string

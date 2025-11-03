@@ -1,10 +1,15 @@
 import type { News } from '@/payload-types'
 import type { PaginatedDocs } from 'payload'
 import Button from './ui/button'
+import { cn } from '@/lib/utils'
 
-export default function Pagination({ totalPages, page, nextPage, prevPage }: PaginatedDocs<News>) {
+type Props = PaginatedDocs<News> & {
+  className?: string
+}
+
+export default function Pagination({ totalPages, page, nextPage, prevPage, className }: Props) {
   return (
-    <nav className="mt-16 flex items-center justify-end gap-x-2 print:hidden">
+    <nav className={cn('mt-16 flex items-center justify-end gap-x-2 print:hidden', className)}>
       <p className="mr-6">
         Seite {page} von {totalPages}
       </p>
