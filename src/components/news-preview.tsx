@@ -4,6 +4,7 @@ import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
 import NoImage from './no-image'
 import Heading from './ui/heading'
+import Button from './ui/button'
 
 export default function NewsPreview({
   thumbnail,
@@ -50,9 +51,14 @@ export default function NewsPreview({
         </p>
 
         {content || gallery ? (
-          <Link href={`/news/${slug}`} className="btn btn-secondary mt-auto lg:mt-0" itemProp="url">
+          <Button
+            href={`/news/${slug}`}
+            variant="secondary"
+            className="mt-auto lg:mt-0"
+            itemProp="url"
+          >
             Weiterlesen &rarr;
-          </Link>
+          </Button>
         ) : null}
       </div>
     </article>

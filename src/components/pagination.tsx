@@ -1,6 +1,6 @@
 import type { News } from '@/payload-types'
-import Link from 'next/link'
 import type { PaginatedDocs } from 'payload'
+import Button from './ui/button'
 
 export default function Pagination({ totalPages, page, nextPage, prevPage }: PaginatedDocs<News>) {
   return (
@@ -9,24 +9,14 @@ export default function Pagination({ totalPages, page, nextPage, prevPage }: Pag
         Seite {page} von {totalPages}
       </p>
       {prevPage ? (
-        <Link
-          href={`/news?page=${prevPage}`}
-          rel="prev"
-          className="btn btn-primary"
-          title={`Gehe zu Seite ${prevPage}`}
-        >
+        <Button href={`/news?page=${prevPage}`} rel="prev" title={`Gehe zu Seite ${prevPage}`}>
           &larr;
-        </Link>
+        </Button>
       ) : null}
       {nextPage ? (
-        <Link
-          href={`/news?page=${nextPage}`}
-          rel="next"
-          className="btn btn-primary"
-          title={`Gehe zu Seite ${nextPage}`}
-        >
+        <Button href={`/news?page=${nextPage}`} rel="next" title={`Gehe zu Seite ${nextPage}`}>
           &rarr;
-        </Link>
+        </Button>
       ) : null}
     </nav>
   )
