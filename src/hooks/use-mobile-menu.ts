@@ -1,0 +1,36 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
+import useMediaQuery from './use-media-query'
+
+export default function useMobileMenu() {
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const menuRef = useRef<HTMLElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+
+  const tabIndex = isMobile ? (isMenuVisible ? 0 : -1) : 0
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMenuVisible(false)
+        toggleRef.current?.focus()
+      }
+    },
+    [setIsMenuVisible],
+  )
+
+  useEffect(() => {
+    if (isMenuVisible) {
+      document.body.classList.add('overflow-y-hidden')
+      document.addEventListener('keydown', handleKeyDown)
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown)
+      }
+    } else {
+      document.body.classList.remove('overflow-y-hidden')
+    }
+  }, [isMenuVisible])
+
+  return { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef }
+}
