@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import Header from '@/components/blocks/header'
 import Button from '@/components/ui/button'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Seite nicht gefunden',
   description:
     'Die von Ihnen gewünschte Seite konnte nicht gefunden werden. Bitte vergewissern Sie sich, das die URL stimmt.',

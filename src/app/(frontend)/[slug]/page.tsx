@@ -29,17 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const page = await getPageBySlug(slug || 'home')
 
+  if (!page) {
+    return {
+      title: 'Seite nicht gefunden',
+      description:
+        'Die von Ihnen gewünschte Seite konnte nicht gefunden werden. Bitte vergewissern Sie sich, das die URL stimmt.',
+    }
+  }
+
   return {
     title: page.title,
     description: page.description,
-    authors: [{ name: 'Andreas Remdt', url: 'https://andreasremdt.com' }],
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3000'),
-    openGraph: {
-      title: page.title as string,
-      description: page.description as string,
-      url: process.env.NEXT_PUBLIC_SERVER_URL,
-      siteName: 'Regio Lions',
-      locale: 'de-DE',
-    },
   }
 }

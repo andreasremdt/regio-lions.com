@@ -21,6 +21,8 @@ export const metadata = {
     default: 'Regio Lions',
     template: '%s | Regio Lions',
   },
+  authors: [{ name: 'Andreas Remdt', url: 'https://andreasremdt.com' }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3000'),
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

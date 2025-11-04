@@ -1,4 +1,5 @@
 import {} from '@payloadcms/richtext-lexical/react'
+import type { Metadata } from 'next'
 import Header from '@/components/blocks/header'
 import Prose from '@/components/blocks/prose'
 import ImageKitImage from '@/components/imagekit-image'
@@ -62,4 +63,22 @@ export default async function Page({ params }: Props) {
       {news.gallery ? <Gallery images={news.gallery} /> : null}
     </>
   )
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const news = await getNewsBySlug(slug)
+
+  if (!news) {
+    return {
+      title: 'Seite nicht gefunden',
+      description:
+        'Die von Ihnen gewünschte Seite konnte nicht gefunden werden. Bitte vergewissern Sie sich, das die URL stimmt.',
+    }
+  }
+
+  return {
+    title: news.title,
+    description: news.excerpt,
+  }
 }
