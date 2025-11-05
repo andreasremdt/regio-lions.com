@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import useFocusTrap from '@/hooks/use-focus-trap'
 import useMobileMenu from '@/hooks/use-mobile-menu'
@@ -9,7 +10,8 @@ import useMobileMenu from '@/hooks/use-mobile-menu'
 export default function Header() {
   const { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef } = useMobileMenu()
   const focusTrapRef = useFocusTrap(isMenuVisible)
-
+  const pathname = usePathname()
+  console.log(pathname)
   return (
     <header
       ref={focusTrapRef}
@@ -73,23 +75,26 @@ export default function Header() {
         id="menu"
       >
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/"
           tabIndex={tabIndex}
+          aria-current={pathname === '/' ? 'page' : undefined}
         >
           Home
         </Link>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/news"
           tabIndex={tabIndex}
+          aria-current={pathname === '/news' ? 'page' : undefined}
         >
           News
         </Link>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/clubs"
           tabIndex={tabIndex}
+          aria-current={pathname === '/clubs' ? 'page' : undefined}
         >
           Clubs
         </Link>
@@ -118,9 +123,10 @@ export default function Header() {
           </svg>
         </a>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/kontakt"
           tabIndex={tabIndex}
+          aria-current={pathname === '/kontakt' ? 'page' : undefined}
         >
           Kontakt
         </Link>
