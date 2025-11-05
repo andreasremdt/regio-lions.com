@@ -12,7 +12,7 @@ export default function Hero({ title, description, images, buttonText, buttonLin
       <p className="mb-8 text-xl sm:w-2/3 md:w-1/2">{description}</p>
       <Button href={buttonLink}>{buttonText} &rarr;</Button>
 
-      <div className="right-0 mt-8 flex gap-4 md:absolute md:top-40 md:mt-0 md:w-2/5 md:gap-8 lg:top-48">
+      <div className="right-0 mt-8 grid grid-cols-3 gap-4 md:absolute md:top-40 md:mt-0 md:w-2/5 md:gap-8 lg:top-48">
         <div className="pt-72">
           <ImageKitImage
             image={images[0]}
