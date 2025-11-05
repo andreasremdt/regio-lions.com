@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 import ImageKitService from '../services/imagekit'
 import type { Media } from '@/payload-types'
 
-const imageKitService = new ImageKitService(process.env.IMAGEKIT_PRIVATE_KEY || '')
+const imageKitService = new ImageKitService(process.env.IMAGEKIT_PRIVATE_KEY)
 
 const media: CollectionConfig = {
   slug: 'media',

@@ -24,15 +24,15 @@ export default buildConfig({
   },
   collections: [users, media, clubs, pages, news, messages],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: mongooseAdapter({
-    url: process.env.DATABASE_URI || '',
+    url: process.env.DATABASE_URI,
     connectOptions: {
-      dbName: process.env.DATABASE_NAME || '',
-      appName: process.env.DATABASE_APP_NAME || '',
+      dbName: process.env.DATABASE_NAME,
+      appName: process.env.DATABASE_APP_NAME,
       retryWrites: true,
       writeConcern: {
         w: 'majority',
