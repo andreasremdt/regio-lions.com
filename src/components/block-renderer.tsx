@@ -9,6 +9,7 @@ import News from './blocks/news'
 import Clubs from './blocks/clubs'
 import ContactForm from './blocks/contact-form'
 import LatestNews from './blocks/latest-news'
+import Image from './blocks/image'
 
 type Props = {
   blocks: Page['content']
@@ -40,6 +41,8 @@ export default function BlockRenderer({ blocks, pageNumber }: Props) {
         return <ContactForm {...block} key={block.id} />
       case 'latestNews':
         return <LatestNews {...block} key={block.id} />
+      case 'image':
+        return <Image {...block} key={block.id} />
       default:
         return null
     }
