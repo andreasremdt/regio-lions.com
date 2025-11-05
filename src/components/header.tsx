@@ -11,7 +11,7 @@ export default function Header() {
   const { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef } = useMobileMenu()
   const focusTrapRef = useFocusTrap(isMenuVisible)
   const pathname = usePathname()
-  console.log(pathname)
+
   return (
     <header
       ref={focusTrapRef}

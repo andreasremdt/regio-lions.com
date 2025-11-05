@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import useMediaQuery from './use-media-query'
 
 export default function useMobileMenu() {
@@ -6,6 +7,7 @@ export default function useMobileMenu() {
   const [isMenuVisible, setIsMenuVisible] = useState(false)
   const menuRef = useRef<HTMLElement>(null)
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const pathname = usePathname()
 
   const tabIndex = isMobile ? (isMenuVisible ? 0 : -1) : 0
 
@@ -31,6 +33,12 @@ export default function useMobileMenu() {
       document.body.classList.remove('overflow-y-hidden')
     }
   }, [isMenuVisible])
+
+  useEffect(() => {
+    if (isMenuVisible) {
+      setIsMenuVisible(false)
+    }
+  }, [pathname])
 
   return { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef }
 }
