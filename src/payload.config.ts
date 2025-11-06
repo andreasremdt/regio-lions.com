@@ -3,7 +3,6 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
-import sharp from 'sharp'
 
 import users from './payload/collections/users'
 import media from './payload/collections/media'
@@ -39,5 +38,4 @@ export default buildConfig({
       },
     },
   }),
-  sharp,
 })
