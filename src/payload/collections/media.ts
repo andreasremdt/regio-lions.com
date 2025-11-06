@@ -6,6 +6,10 @@ const imageKitService = new ImageKitService(process.env.IMAGEKIT_PRIVATE_KEY)
 
 const media: CollectionConfig = {
   slug: 'media',
+  labels: {
+    singular: 'Medien',
+    plural: 'Medien',
+  },
   access: {
     read: () => true,
   },

@@ -5,6 +5,10 @@ const messages: CollectionConfig = {
   admin: {
     useAsTitle: 'firstname',
   },
+  labels: {
+    singular: 'Nachricht',
+    plural: 'Nachrichten',
+  },
   access: {
     create: () => true,
     read: ({ req: { user } }) => Boolean(user),

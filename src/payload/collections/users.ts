@@ -5,6 +5,10 @@ const users: CollectionConfig = {
   admin: {
     useAsTitle: 'email',
   },
+  labels: {
+    singular: 'Benutzer',
+    plural: 'Benutzer',
+  },
   auth: true,
   fields: [],
 }

@@ -16,6 +16,10 @@ const pages: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  labels: {
+    singular: 'Seite',
+    plural: 'Seiten',
+  },
   fields: [
     {
       name: 'title',

@@ -3,6 +3,8 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
+import { de } from '@payloadcms/translations/languages/de'
+import { en } from '@payloadcms/translations/languages/en'
 
 import users from './payload/collections/users'
 import media from './payload/collections/media'
@@ -38,4 +40,11 @@ export default buildConfig({
       },
     },
   }),
+  graphQL: {
+    disable: true,
+  },
+  i18n: {
+    supportedLanguages: { de, en },
+    fallbackLanguage: 'de',
+  },
 })
