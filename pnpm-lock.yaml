@@ -11,6 +11,9 @@ importers:
       '@payloadcms/db-mongodb':
         specifier: 3.62.1
         version: 3.62.1(@aws-sdk/credential-providers@3.916.0)(payload@3.62.1(graphql@16.11.0)(typescript@5.9.3))
+      '@payloadcms/email-nodemailer':
+        specifier: ^3.62.1
+        version: 3.62.1(payload@3.62.1(graphql@16.11.0)(typescript@5.9.3))
       '@payloadcms/next':
         specifier: 3.62.1
         version: 3.62.1(@types/react@19.2.2)(graphql@16.11.0)(monaco-editor@0.54.0)(next@15.4.4(@playwright/test@1.54.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.77.4))(payload@3.62.1(graphql@16.11.0)(typescript@5.9.3))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3)
@@ -895,6 +898,12 @@ packages:
 
   '@payloadcms/db-mongodb@3.62.1':
     resolution: {integrity: sha512-f//Xlj+i81eh2N9YwRUB24X4GUuFjYGPDdnEf8mk6xMzfOzGkq0z+c4uWxJMm4fSvVHRLhgYxIALJL4CJ6FbSA==}
+    peerDependencies:
+      payload: 3.62.1
+
+  '@payloadcms/email-nodemailer@3.62.1':
+    resolution: {integrity: sha512-Zi0u8x0vMBPWQwWf7i+9EzXT/YQCv1zKfnwPy2zuW7AL+DVCRLeHIP/lC5PwnyeZ1+giAj5UGxduJiwS3QOpWw==}
+    engines: {node: ^18.20.2 || >=20.9.0}
     peerDependencies:
       payload: 3.62.1
 
@@ -2737,6 +2746,10 @@ packages:
         optional: true
       sass:
         optional: true
+
+  nodemailer@7.0.9:
+    resolution: {integrity: sha512-9/Qm0qXIByEP8lEV2qOqcAW7bRpL8CR9jcTwk3NBnHJNmP9fIJ86g2fgmIXqHY+nj55ZEMwWqYAT2QTDpRUYiQ==}
+    engines: {node: '>=6.0.0'}
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -4620,6 +4633,11 @@ snapshots:
       - snappy
       - socks
       - supports-color
+
+  '@payloadcms/email-nodemailer@3.62.1(payload@3.62.1(graphql@16.11.0)(typescript@5.9.3))':
+    dependencies:
+      nodemailer: 7.0.9
+      payload: 3.62.1(graphql@16.11.0)(typescript@5.9.3)
 
   '@payloadcms/graphql@3.62.1(graphql@16.11.0)(payload@3.62.1(graphql@16.11.0)(typescript@5.9.3))(typescript@5.9.3)':
     dependencies:
@@ -6934,6 +6952,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
+
+  nodemailer@7.0.9: {}
 
   normalize-path@3.0.0: {}
 

@@ -40,7 +40,7 @@ export default async function sendMessage(data: FormInputData): Promise<SendMess
     const payload = await getPayload({ config })
 
     await payload.sendEmail({
-      to: 'info@regio-lions.de',
+      to: 'info@regio-lions.com',
       subject: `Anfrage von ${firstname} ${lastname}`,
       replyTo: email,
       text: `Name: ${firstname} ${lastname}\nE-Mail: ${email}\nTelefon: ${phone || '-'}\n\n${message}`,

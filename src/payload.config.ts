@@ -1,5 +1,6 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -37,6 +38,18 @@ export default buildConfig({
       retryWrites: true,
       writeConcern: {
         w: 'majority',
+      },
+    },
+  }),
+  email: nodemailerAdapter({
+    defaultFromAddress: 'no-reply@regio-lions.com',
+    defaultFromName: 'Regio Lions',
+    transportOptions: {
+      host: process.env.EMAIL_SMTP_HOST,
+      port: 587,
+      auth: {
+        user: process.env.EMAIL_SMTP_USER,
+        pass: process.env.EMAIL_SMTP_PASSWORD,
       },
     },
   }),
