@@ -9,7 +9,7 @@ import useMobileMenu from '@/hooks/use-mobile-menu'
 
 export default function Header() {
   const { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef } = useMobileMenu()
-  const focusTrapRef = useFocusTrap(isMenuVisible)
+  const focusTrapRef = useFocusTrap<HTMLDivElement>(isMenuVisible)
   const pathname = usePathname()
 
   return (
