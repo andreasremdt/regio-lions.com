@@ -5,6 +5,7 @@ import type { Media } from '@/payload-types'
 import ImageKitImage from './imagekit-image'
 import useFocusTrap from '@/hooks/use-focus-trap'
 import { cn } from '@/lib/utils'
+import Icon from './ui/icon'
 
 type LightboxProps = {
   images: (string | Media)[]
@@ -99,17 +100,7 @@ export default function Lightbox({
         className="absolute top-4 right-4 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white transition-colors hover:bg-gray-700/80 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-hidden"
         aria-label="Lightbox schließen"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="h-6 w-6"
-          aria-hidden="true"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <Icon name="close" />
       </button>
 
       {/* Previous button */}
@@ -121,17 +112,7 @@ export default function Lightbox({
         className="absolute left-4 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white transition-colors hover:bg-gray-700/80 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-hidden"
         aria-label="Vorheriges Bild"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="h-6 w-6"
-          aria-hidden="true"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
+        <Icon name="arrow-left" />
       </button>
 
       {/* Next button */}
@@ -143,17 +124,7 @@ export default function Lightbox({
         className="absolute right-4 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white transition-colors hover:bg-gray-700/80 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-hidden"
         aria-label="Nächstes Bild"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="h-6 w-6"
-          aria-hidden="true"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
+        <Icon name="arrow-right" />
       </button>
 
       {/* Image container */}

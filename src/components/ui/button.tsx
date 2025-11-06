@@ -30,7 +30,7 @@ export default function Button({
   ...props
 }: Props) {
   const baseClasses = cn(
-    'inline-flex h-12 items-center cursor-pointer rounded-md border-2 px-6 font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-4 disabled:pointer-events-none disabled:cursor-not-allowed print:hidden',
+    'inline-flex h-12 items-center gap-x-2 cursor-pointer rounded-md border-2 px-6 font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-4 disabled:pointer-events-none disabled:cursor-not-allowed print:hidden',
     {
       'border-primary-900 bg-primary-900 text-white hover:bg-white hover:text-primary-900 focus-visible:bg-white focus-visible:text-primary-900 focus-visible:ring-primary-100 disabled:border-gray-500 disabled:bg-gray-500 dark:border-primary-200 dark:bg-primary-200 dark:text-primary-900 dark:hover:border-white dark:focus-visible:border-white dark:focus-visible:ring-white/60':
         variant === 'primary',

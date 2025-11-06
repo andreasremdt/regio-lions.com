@@ -2,6 +2,7 @@ import type { HeroBlock } from '@/payload-types'
 import ImageKitImage from '../imagekit-image'
 import Heading from '../ui/heading'
 import Button from '../ui/button'
+import Icon from '../ui/icon'
 
 export default function Hero({ title, description, images, buttonText, buttonLink }: HeroBlock) {
   return (
@@ -10,7 +11,9 @@ export default function Hero({ title, description, images, buttonText, buttonLin
         {title}
       </Heading>
       <p className="mb-8 text-xl sm:w-2/3 md:w-1/2">{description}</p>
-      <Button href={buttonLink}>{buttonText} &rarr;</Button>
+      <Button href={buttonLink}>
+        {buttonText} <Icon name="arrow-right" className="size-4" />
+      </Button>
 
       <div className="right-0 mt-8 grid grid-cols-3 gap-4 md:absolute md:top-40 md:mt-0 md:w-2/5 md:gap-8 lg:top-48">
         <div className="pt-72">

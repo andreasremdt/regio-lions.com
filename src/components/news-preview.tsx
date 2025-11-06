@@ -5,6 +5,7 @@ import Link from 'next/link'
 import NoImage from './ui/no-image'
 import Heading from './ui/heading'
 import Button from './ui/button'
+import Icon from './ui/icon'
 
 export default function NewsPreview({
   thumbnail,
@@ -57,7 +58,7 @@ export default function NewsPreview({
             className="mt-auto lg:mt-0"
             itemProp="url"
           >
-            Weiterlesen &rarr;
+            Weiterlesen <Icon name="arrow-right" className="size-4" />
           </Button>
         ) : null}
       </div>

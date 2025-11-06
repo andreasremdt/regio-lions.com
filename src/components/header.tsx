@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import useFocusTrap from '@/hooks/use-focus-trap'
 import useMobileMenu from '@/hooks/use-mobile-menu'
+import Icon from './ui/icon'
 
 export default function Header() {
   const { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef } = useMobileMenu()
@@ -38,28 +39,7 @@ export default function Header() {
         onClick={() => setIsMenuVisible(!isMenuVisible)}
         className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 z-20 cursor-pointer rounded-xs text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid md:hidden dark:text-white"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          aria-hidden="true"
-          stroke="currentColor"
-          className="z-20 h-10 w-10"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            className={cn({ hidden: isMenuVisible })}
-          ></path>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className={cn({ hidden: !isMenuVisible })}
-            d="M6 18 18 6M6 6l12 12"
-          ></path>
-        </svg>
+        <Icon name={isMenuVisible ? 'close' : 'menu'} className="z-20 size-10" />
       </button>
 
       <nav
@@ -86,7 +66,7 @@ export default function Header() {
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/news"
           tabIndex={tabIndex}
-          aria-current={pathname === '/news' ? 'page' : undefined}
+          aria-current={pathname.includes('/news') ? 'page' : undefined}
         >
           News
         </Link>
@@ -106,21 +86,10 @@ export default function Header() {
           tabIndex={tabIndex}
         >
           3-Länderlauf{' '}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="h-5 w-5 -translate-y-px text-gray-400 dark:text-gray-200"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-            ></path>
-          </svg>
+          <Icon
+            name="external"
+            className="size-5 -translate-y-px text-gray-400 dark:text-gray-200"
+          />
         </a>
         <Link
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"

@@ -6,6 +6,7 @@ import ImageKitImage from '../imagekit-image'
 import Link from 'next/link'
 import NoImage from '../ui/no-image'
 import { formatDate } from '@/lib/utils'
+import Icon from '../ui/icon'
 
 export default async function LatestNews({
   title,
@@ -55,7 +56,9 @@ export default async function LatestNews({
       </div>
 
       <div className="mt-12 text-center">
-        <Button href={buttonLink}>{buttonText} &rarr;</Button>
+        <Button href={buttonLink}>
+          {buttonText} <Icon name="arrow-right" className="size-4" />
+        </Button>
       </div>
     </section>
   )
