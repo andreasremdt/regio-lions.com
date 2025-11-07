@@ -5,7 +5,7 @@ import Heading from '../ui/heading'
 export default function WhoWeAre({ title, content, stats }: WhoWeAreBlock) {
   return (
     <section className="py-16 md:py-32 lg:py-48">
-      <Heading level="h2" tag="h2" className="mb-8">
+      <Heading level="h2" tag="h2" className="mb-4 md:mb-8">
         {title}
       </Heading>
       <div className="flex flex-col gap-8 md:flex-row md:gap-16">

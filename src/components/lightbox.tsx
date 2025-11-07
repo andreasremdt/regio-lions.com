@@ -109,7 +109,7 @@ export default function Lightbox({
           e.stopPropagation()
           onPrevious()
         }}
-        className="absolute left-4 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white hover:bg-gray-600/80 focus-visible:ring-4 focus-visible:ring-gray-500/80 focus-visible:outline-hidden"
+        className="absolute left-8 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white hover:bg-gray-600/80 focus-visible:ring-4 focus-visible:ring-gray-500/80 focus-visible:outline-hidden"
         aria-label="Vorheriges Bild"
       >
         <Icon name="arrow-left" />
@@ -121,7 +121,7 @@ export default function Lightbox({
           e.stopPropagation()
           onNext()
         }}
-        className="absolute right-4 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white hover:bg-gray-600/80 focus-visible:ring-4 focus-visible:ring-gray-500/80 focus-visible:outline-hidden"
+        className="absolute right-8 z-10 flex size-12 cursor-pointer items-center justify-center rounded-full bg-gray-900/80 text-white hover:bg-gray-600/80 focus-visible:ring-4 focus-visible:ring-gray-500/80 focus-visible:outline-hidden"
         aria-label="Nächstes Bild"
       >
         <Icon name="arrow-right" />
@@ -139,7 +139,7 @@ export default function Lightbox({
         ) : null}
 
         <div
-          className={cn('relative h-full w-full transition-opacity duration-300', {
+          className={cn('relative h-full rounded-xl transition-opacity duration-300', {
             'opacity-0': isLoading,
             'opacity-100': !isLoading,
           })}

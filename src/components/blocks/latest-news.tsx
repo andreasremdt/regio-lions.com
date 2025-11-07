@@ -19,10 +19,10 @@ export default async function LatestNews({
 
   return (
     <section>
-      <Heading level="h2" tag="h2" className="mb-8">
+      <Heading level="h2" tag="h2" className="mb-4 md:mb-8">
         {title}
       </Heading>
-      <p className="mb-12 text-xl md:w-2/3 lg:w-1/2">{description}</p>
+      <p className="mb-12 text-lg md:w-2/3 md:text-xl lg:w-1/2">{description}</p>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {news.docs.map((entry) => (

@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://andreasremdt.com"
           target="_blank"
-          className="text-primary-900 dark:text-primary-200 focus-visible:outline-primary-900 dark:focus-visible:outline-primary-200 rounded-xs font-medium underline hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:hover:text-white"
+          className="text-primary-900 dark:text-primary-200 focus-visible:outline-primary-900 dark:focus-visible:outline-primary-200 rounded-xs font-medium underline underline-offset-4 hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:hover:text-white"
           rel="nofollow noreferrer noopener"
         >
           Softwareentwicklung Andreas Remdt

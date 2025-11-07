@@ -10,7 +10,7 @@ export default function Hero({ title, description, images, buttonText, buttonLin
       <Heading level="h1" tag="h1" className="mb-8 md:w-3/5">
         {title}
       </Heading>
-      <p className="mb-8 text-xl sm:w-2/3 md:w-1/2">{description}</p>
+      <p className="mb-8 text-lg sm:w-2/3 md:w-1/2 md:text-xl">{description}</p>
       <Button href={buttonLink}>
         {buttonText} <Icon name="arrow-right" className="size-4" />
       </Button>

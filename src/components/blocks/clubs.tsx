@@ -5,7 +5,7 @@ import Heading from '../ui/heading'
 export default async function Clubs({ countries }: ClubsBlock) {
   return countries.map((country) => (
     <div key={country.country} className="mt-16 first-of-type:mt-0">
-      <Heading level="h2" tag="h2" className="mb-8">
+      <Heading level="h2" tag="h2" className="mb-4 md:mb-8">
         {country.country}
       </Heading>
 
