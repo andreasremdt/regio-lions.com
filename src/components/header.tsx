@@ -9,7 +9,14 @@ import useMobileMenu from '@/hooks/use-mobile-menu'
 import Icon from './ui/icon'
 
 export default function Header() {
-  const { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef } = useMobileMenu()
+  const {
+    isMenuVisible,
+    isHiddenFromScreenReaders,
+    setIsMenuVisible,
+    tabIndex,
+    menuRef,
+    toggleRef,
+  } = useMobileMenu()
   const focusTrapRef = useFocusTrap<HTMLDivElement>(isMenuVisible)
   const pathname = usePathname()
 
@@ -51,7 +58,7 @@ export default function Header() {
             'pointer-events-none opacity-0': !isMenuVisible,
           },
         )}
-        aria-hidden={!isMenuVisible}
+        aria-hidden={isHiddenFromScreenReaders ? 'true' : undefined}
         id="menu"
       >
         <Link

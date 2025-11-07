@@ -10,6 +10,7 @@ export default function useMobileMenu() {
   const pathname = usePathname()
 
   const tabIndex = isMobile ? (isMenuVisible ? 0 : -1) : 0
+  const isHiddenFromScreenReaders = isMobile && !isMenuVisible
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -40,5 +41,12 @@ export default function useMobileMenu() {
     }
   }, [pathname])
 
-  return { isMenuVisible, setIsMenuVisible, tabIndex, menuRef, toggleRef }
+  return {
+    isMenuVisible,
+    isHiddenFromScreenReaders,
+    setIsMenuVisible,
+    tabIndex,
+    menuRef,
+    toggleRef,
+  }
 }
