@@ -40,7 +40,10 @@ export default function NewsPreview({
         </time>
         <Heading level="h3" tag="h2" className="mt-1 mb-6" itemProp="headline">
           {content || gallery ? (
-            <Link href={`/news/${slug}`} className="hover:text-primary-900">
+            <Link
+              href={`/news/${slug}`}
+              className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid"
+            >
               {title}
             </Link>
           ) : (

@@ -55,7 +55,7 @@ export default function Header() {
         id="menu"
       >
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/"
           tabIndex={tabIndex}
           aria-current={pathname === '/' ? 'page' : undefined}
@@ -63,7 +63,7 @@ export default function Header() {
           Home
         </Link>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/news"
           tabIndex={tabIndex}
           aria-current={pathname.includes('/news') ? 'page' : undefined}
@@ -71,7 +71,7 @@ export default function Header() {
           News
         </Link>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/clubs"
           tabIndex={tabIndex}
           aria-current={pathname === '/clubs' ? 'page' : undefined}
@@ -79,7 +79,7 @@ export default function Header() {
           Clubs
         </Link>
         <a
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 inline-flex items-center gap-x-2 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 inline-flex items-center gap-x-2 rounded-xs font-medium text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid dark:text-white"
           href="https://www.3laenderlauf.org/"
           target="_blank"
           rel="noopener nofollow noreferrer"
@@ -92,7 +92,7 @@ export default function Header() {
           />
         </a>
         <Link
-          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
+          className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/kontakt"
           tabIndex={tabIndex}
           aria-current={pathname === '/kontakt' ? 'page' : undefined}

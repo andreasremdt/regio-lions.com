@@ -21,7 +21,7 @@ export default function Gallery({ images }: { images: (string | Media)[] }) {
               setCurrentImageIndex(index)
               setIsLightboxOpen(true)
             }}
-            className="group focus-visible:outline-primary-900 bg-grey-100 overflow-hidden rounded-xl focus-visible:outline-hidden focus-visible:outline-3 focus-visible:outline-offset-2"
+            className="group focus-visible:outline-primary-900 dark:focus-visible:outline-primary-200 bg-grey-100 overflow-hidden rounded-xl focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-solid"
             aria-label={`Bild ${index + 1} von ${images.length} öffnen`}
           >
             <ImageKitImage
