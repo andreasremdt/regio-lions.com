@@ -26,6 +26,8 @@ export default function NewsPreview({
         <ImageKitImage
           image={thumbnail}
           className="h-64 w-full rounded-xl object-cover shadow-lg lg:aspect-square lg:h-auto lg:max-w-72"
+          width={300}
+          height={300}
         />
       ) : (
         <NoImage className="aspect-square w-full lg:max-w-72" />

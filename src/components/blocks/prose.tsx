@@ -16,7 +16,7 @@ export default function Prose({ content, className }: Props) {
       converters={{
         ...defaultJSXConverters,
         upload: ({ node }) => {
-          return <ImageKitImage image={node.value as Media} loading="lazy" />
+          return <ImageKitImage image={node.value as Media} width={900} height={500} />
         },
         blocks: {
           videoId: ({ node }: Record<string, any>) => {

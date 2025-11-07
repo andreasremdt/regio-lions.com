@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import type { Media } from '@/payload-types'
 import Image, { type ImageProps } from 'next/image'
 
@@ -8,8 +9,9 @@ type Props = Omit<ImageProps, 'src' | 'alt'> & {
 export default function ImageKitImage({
   image,
   quality = 75,
-  loading = 'eager',
+  loading = 'lazy',
   decoding = 'async',
+  className,
   ...props
 }: Props) {
   if (typeof image === 'string' || !image.imagekit) {
@@ -25,6 +27,7 @@ export default function ImageKitImage({
       decoding={decoding}
       width={image.width || 300}
       height={image.height || 300}
+      className={cn('bg-gray-100', className)}
       {...props}
     />
   )

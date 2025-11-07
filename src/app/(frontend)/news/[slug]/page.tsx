@@ -31,6 +31,9 @@ export default async function Page({ params }: Props) {
           <ImageKitImage
             image={news.thumbnail}
             className="mb-4 w-full rounded-xl object-cover object-center shadow-lg"
+            loading="eager"
+            width={1250}
+            height={750}
           />
           {news.thumbnailText ? (
             <figcaption className="flex">

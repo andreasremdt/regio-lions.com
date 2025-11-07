@@ -34,6 +34,8 @@ export default async function LatestNews({
               <ImageKitImage
                 image={entry.thumbnail}
                 className="aspect-square h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 sm:max-h-none"
+                width={400}
+                height={400}
               />
             ) : (
               <NoImage />

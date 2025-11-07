@@ -21,6 +21,9 @@ export default function Hero({ title, description, images, buttonText, buttonLin
             image={images[0]}
             priority
             className="aspect-[1/1.5] rounded-xl object-cover shadow-lg"
+            width={200}
+            height={300}
+            loading="eager"
           />
         </div>
         <div className="pt-40">
@@ -28,11 +31,17 @@ export default function Hero({ title, description, images, buttonText, buttonLin
             image={images[1]}
             priority
             className="mb-4 aspect-[1/1.5] rounded-xl object-cover shadow-lg md:mb-8"
+            width={200}
+            height={300}
+            loading="eager"
           />
           <ImageKitImage
             image={images[2]}
             priority
             className="aspect-[1/1.5] rounded-xl object-cover shadow-lg"
+            width={200}
+            height={300}
+            loading="eager"
           />
         </div>
         <div>
@@ -40,11 +49,17 @@ export default function Hero({ title, description, images, buttonText, buttonLin
             image={images[3]}
             priority
             className="mb-4 aspect-[1/1.5] rounded-xl object-cover shadow-lg md:mb-8"
+            width={200}
+            height={300}
+            loading="eager"
           />
           <ImageKitImage
             image={images[4]}
             priority
             className="mb-8 aspect-[1/1.5] rounded-xl object-cover shadow-lg"
+            width={200}
+            height={300}
+            loading="eager"
           />
         </div>
       </div>
