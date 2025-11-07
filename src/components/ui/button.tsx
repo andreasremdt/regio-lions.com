@@ -43,6 +43,7 @@ export default function Button({
   if (href) {
     return (
       <Link
+        prefetch={href ? href.startsWith('/') : undefined}
         href={href}
         className={baseClasses}
         {...(props as Omit<ComponentPropsWithoutRef<typeof Link>, 'href'>)}

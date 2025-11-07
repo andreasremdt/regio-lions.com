@@ -19,12 +19,14 @@ export default function Footer() {
       <nav className="space-x-4 md:space-x-8" aria-label="fusszeilennavigation">
         <Link
           href="/impressum"
+          prefetch
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid"
         >
           Impressum
         </Link>
         <Link
           href="/datenschutz"
+          prefetch
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid"
         >
           Datenschutz

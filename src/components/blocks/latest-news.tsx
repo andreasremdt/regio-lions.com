@@ -46,6 +46,7 @@ export default async function LatestNews({
               </time>
               <Heading level="h4" tag="h3" className="mb-1">
                 <Link
+                  prefetch
                   href={`/news/${entry.slug}`}
                   className="text-white after:absolute after:inset-0 focus-visible:outline-hidden"
                 >

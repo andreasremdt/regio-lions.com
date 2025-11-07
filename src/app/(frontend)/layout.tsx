@@ -28,6 +28,11 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className="scroll-smooth" data-scroll-behavior="smooth">
+      <head>
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+        <link rel="preconnect" href="https://ik.imagekit.io" />
+      </head>
+
       <body
         className={cn(
           roboto.variable,

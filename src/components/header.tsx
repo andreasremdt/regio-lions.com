@@ -64,6 +64,7 @@ export default function Header() {
         <Link
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/"
+          prefetch
           tabIndex={tabIndex}
           aria-current={pathname === '/' ? 'page' : undefined}
         >
@@ -72,6 +73,7 @@ export default function Header() {
         <Link
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/news"
+          prefetch
           tabIndex={tabIndex}
           aria-current={pathname.includes('/news') ? 'page' : undefined}
         >
@@ -80,6 +82,7 @@ export default function Header() {
         <Link
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/clubs"
+          prefetch
           tabIndex={tabIndex}
           aria-current={pathname === '/clubs' ? 'page' : undefined}
         >
@@ -101,6 +104,7 @@ export default function Header() {
         <Link
           className="hover:text-primary-900 focus-visible:text-primary-900 focus-visible:outline-primary-900 dark:hover:text-primary-200 dark:focus-visible:text-primary-200 dark:focus-visible:outline-primary-200 aria-[current]:text-primary-900 dark:aria-[current]:text-primary-200 rounded-xs font-medium text-gray-900 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-solid aria-[current]:underline dark:text-white"
           href="/kontakt"
+          prefetch
           tabIndex={tabIndex}
           aria-current={pathname === '/kontakt' ? 'page' : undefined}
         >
