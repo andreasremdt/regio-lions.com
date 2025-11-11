@@ -11,17 +11,17 @@
 @theme {
   --animate-fade-in: fade-in 0.3s ease-out forwards;
 
-  --color-primary-50: #ebf7ff;
-  --color-primary-100: #d1eeff;
-  --color-primary-200: #aee1ff;
-  --color-primary-300: #76d1ff;
-  --color-primary-400: #35b6ff;
-  --color-primary-500: #078eff;
-  --color-primary-600: #0068ff;
-  --color-primary-700: #004fff;
-  --color-primary-800: #0041d7;
-  --color-primary-900: #00338d;
-  --color-primary-950: #062665;
+  --color-primary-50: oklch(0.9695 0.0167 236.69);
+  --color-primary-100: oklch(0.9333 0.0382 233.55);
+  --color-primary-200: oklch(0.8844 0.0669 234.33);
+  --color-primary-300: oklch(0.8214 0.1086 232.18);
+  --color-primary-400: oklch(0.7403 0.1507 239.26);
+  --color-primary-500: oklch(0.6454 0.1947 252.62);
+  --color-primary-600: oklch(0.5672 0.238518 260.5437);
+  --color-primary-700: oklch(0.5233 0.2659 263.08);
+  --color-primary-800: oklch(0.4598 0.233958 263.0937);
+  --color-primary-900: oklch(0.3587 0.1573 261.23);
+  --color-primary-950: oklch(0.2929 0.1171 261.87);
 
   @keyframes fade-in {
     0% {
