@@ -3,7 +3,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { draftMode } from 'next/headers'
 
-export const getAllNews = cache(async (limit: number = 10, page: number = 1) => {
+export const getAllNews = cache(async function getAllNews(limit: number = 10, page: number = 1) {
   const { isEnabled } = await draftMode()
   const payload = await getPayload({ config })
 
@@ -18,7 +18,7 @@ export const getAllNews = cache(async (limit: number = 10, page: number = 1) => 
   return news
 })
 
-export const getNewsBySlug = cache(async (slug: string) => {
+export const getNewsBySlug = cache(async function getNewsBySlug(slug: string) {
   const { isEnabled } = await draftMode()
   const payload = await getPayload({ config })
   const result = await payload.find({
