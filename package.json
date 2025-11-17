@@ -16,7 +16,7 @@
     "@payloadcms/email-nodemailer": "^3.62.1",
     "@payloadcms/next": "3.62.1",
     "@payloadcms/richtext-lexical": "3.62.1",
-    "@payloadcms/translations": "^3.62.1",
+    "@payloadcms/translations": "^3.64.0",
     "@payloadcms/ui": "3.62.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/typography": "^0.5.19",
