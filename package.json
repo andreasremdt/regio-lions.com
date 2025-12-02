@@ -20,7 +20,7 @@
     "@payloadcms/ui": "3.62.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/typography": "^0.5.19",
-    "@tanstack/react-form": "^1.23.8",
+    "@tanstack/react-form": "^1.27.0",
     "clsx": "^2.1.1",
     "next": "15.4.4",
     "payload": "3.62.1",
